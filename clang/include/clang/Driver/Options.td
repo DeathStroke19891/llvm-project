@@ -658,7 +658,8 @@ defvar std = !strconcat("LangStandard::getLangStandardForKind(", lang_std.KeyPat
 //   . => _
 
 // Developer Driver Options
-
+def instrument_cycles : Flag<["--"], "function-cycle-count">, Group<f_Group>, HelpText<"Show number of function cycles">,
+  Visibility<[ClangOption, CC1Option]>;
 def internal_Group : OptionGroup<"<clang internal options>">,
   Flags<[HelpHidden]>;
 def internal_driver_Group : OptionGroup<"<clang driver internal options>">,

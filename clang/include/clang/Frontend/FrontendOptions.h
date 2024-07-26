@@ -278,6 +278,8 @@ public:
 /// FrontendOptions - Options for controlling the behavior of the frontend.
 class FrontendOptions {
 public:
+  LLVM_PREFERRED_TYPE(bool)
+  unsigned InstrumentCycles = 0;
   /// Disable memory freeing on exit.
   LLVM_PREFERRED_TYPE(bool)
   unsigned DisableFree : 1;
